@@ -25,7 +25,7 @@ body {
       rgba(243, 245, 245, 0.9),
       rgba(2, 82, 89, 0.9)
     ),
-    url("/asses/transferir.jfif");
+    url("../asses/transferir.jfif");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
