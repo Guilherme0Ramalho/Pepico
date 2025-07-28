@@ -248,6 +248,19 @@ color: var(--);
   }
 }
 
+@media (max-width: 768px) {
+  .cashback-section {
+    padding: 2rem 1rem;
+    flex-direction: column;
+  }
+
+  .stores {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+
 @media (width < 600px) {
   #footer{
     margin-top: 160px;
