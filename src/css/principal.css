@@ -1,18 +1,5 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 
-::-webkit-scrollbar{
-  width: 10px;
-}
-
-::-webkit-scrollbar-track{
-  background-color: #00605f;
-  
-}
-
-::-webkit-scrollbar-thumb{
-  background-color: #ffffff;
-}
 
 
 :root {
@@ -22,16 +9,13 @@
   --text-light: #94a3b8;
   --white: #ffffff;
   --max-width: 1400px;
+
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  overflow-x: hidden;
 }
 
 body {
@@ -45,7 +29,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  overflow-x: hidden;
+  height: 900px;
 }
 
 .container {
@@ -64,23 +48,17 @@ nav {
   gap: 1rem;
 }
 
-.nav__logo img {
-width: 130px;
 
+
+.logo{
+  width: 130px;
+  height: 100px;
 }
 
-
-
-.link a {
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--white);
-}
 a{
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
-
 
 
 .login {
@@ -110,7 +88,7 @@ a{
 
 .destination__container {
   position: relative;
-  padding: 5rem 1rem;
+  padding: 5rem 0 5rem 5rem;
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -119,12 +97,35 @@ a{
 }
 
 
+/* .socials {
+  position: absolute;
+  top: 25rem;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.socials::after {
+  position: absolute;
+  content: "";
+  top: -22rem;
+  left: 15px;
+  height: 15rem;
+  width: 2px;
+  background-color: var(--white);
+}
+*/
+.socials span {
+  font-size: 2rem;
+  color: var(--white);
+}
 
 .content h1 {
   margin-bottom: 1rem;
   font-size: 4.5rem;
   font-weight: 800;
-  color: var(--blue);
+  color: var(--black);
 }
 
 .content h1 span {
@@ -136,7 +137,7 @@ a{
   max-width: 350px;
   margin-bottom: 2rem;
   line-height: 1.5rem;
-  color: var(--);
+  color: var(--black);
 }
 
 .content .btn {
@@ -145,7 +146,7 @@ a{
   border: none;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--whit);
+  color: var(--white);
   background-color: var(--secondary-color);
   cursor: pointer;
 }
@@ -162,29 +163,26 @@ a{
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
 }
 
-
+.destination__card img {
+  width: 100%;
+}
 
 .card__content {
   padding: 1rem;
-  overflow-y: auto;
 }
 
 .card__content h4 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--);
+  color: var(--text-dark);
 }
 
 .card__content p {
   margin-bottom: 1rem;
   font-size: 0.9rem;
   line-height: 1.5rem;
-  color: rgb(54, 54, 54);
-}
-
-li{
-color: var(--);
+  color: white;
 }
 
 .card__content .btn {
@@ -204,7 +202,6 @@ color: var(--);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 #footer h3 {
@@ -221,9 +218,8 @@ color: var(--);
   font-weight: bold;
 }
  
-
 @media (width < 1200px) {
-  
+
 
   .destination__container {
     grid-template-columns: 1fr;
@@ -231,10 +227,12 @@ color: var(--);
 }
 
 @media (width < 900px) {
-  #footer{
-    margin-top: 100px;
-   }
-
+ #footer{
+  margin-top: 100px;
+ }
+  body{
+    height: 1550px;
+  }
   .nav__links {
     display: none;
   }
@@ -248,27 +246,11 @@ color: var(--);
   }
 }
 
-@media (max-width: 768px) {
-  .cashback-section {
-    padding: 2rem 1rem;
-    flex-direction: column;
-  }
-
-  .stores {
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
-
-
 @media (width < 600px) {
+  
   #footer{
     margin-top: 160px;
    }
-   
-  .search {
-    display: none;
-  }
 
   .destination__container {
     padding-left: 3rem;
@@ -282,74 +264,8 @@ color: var(--);
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
-/**/
-
-
-
-.cashback-section {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 100px;
-  gap: 50px;
+@media (width < 500px) {
+  #footer{
+    margin-top: 100px;
+   }
 }
-
-.text-content {
-  flex: 1;
-  min-width: 300px;
-}
-
-.text-content h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.text-content p {
-  font-size: 1rem;
-  margin-bottom: 30px;
-  color: #666;
-}
-
-.stores {
-  display: flex;
-  gap: 50px;
-}
-
-.store-list h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.store-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.store-list li {
-  margin-bottom: 8px;
-  font-size: 1rem;
-}
-
-.cashback-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  flex: 1;
-  min-width: 300px;
-}
-
-.card {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-
-
